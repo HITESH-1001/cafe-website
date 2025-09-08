@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { Video } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -30,7 +31,8 @@ export default function Navbar() {
           <div className="h-16 flex items-center justify-between">
             {/* Brand */}
             <a href="/" className="brand text-2xl font-semibold tracking-wide">
-The Hipsters Cafe hello           </a>
+              Cafeteria          </a>
+    
 
             {/* Desktop menu */}
             <ul className="hidden md:flex items-center gap-10">
