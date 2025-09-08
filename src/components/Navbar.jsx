@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="h-16 flex items-center justify-between">
             {/* Brand */}
             <a href="/" className="brand text-2xl font-semibold tracking-wide">
-The Hipsters Cafe            </a>
+The Hipsters Cafe hello           </a>
 
             {/* Desktop menu */}
             <ul className="hidden md:flex items-center gap-10">
