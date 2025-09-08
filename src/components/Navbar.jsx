@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
@@ -30,27 +29,34 @@ export default function Navbar() {
           <div className="h-16 flex items-center justify-between">
             {/* Brand */}
             <a href="/" className="brand text-2xl font-semibold tracking-wide">
-The Hipsters Cafe hello           </a>
+              The Hipsters Cafe
+            </a>
 
             {/* Desktop menu */}
             <ul className="hidden md:flex items-center gap-10">
-              {["Home", "Menu", "About Us", "Facilities"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={"#" + item.toLowerCase().replace(/\s+/g, "")}
-                    className="nav-link inline-block py-2 text-sm lg:text-base hover:text-white/80"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["Home", "Menu", "About Us", "Facilities", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <a
+                      href={
+                        item === "Contact"
+                          ? "/contact"
+                          : "#" + item.toLowerCase().replace(/\s+/g, "")
+                      }
+                      className="nav-link inline-block py-2 text-sm lg:text-base hover:text-white/80"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
 
             {/* Right side (Search + Sign In) */}
-            <div className=" flex items-center gap-4">
+            <div className="flex items-center gap-4">
               <button
                 aria-label="Search"
-                className="nav-ta h-10 w-10 grid place-items-center rounded border border-white/25 hover:bg-white/10"
+                className="nav-cta h-10 w-10 grid place-items-center rounded border border-white/25 hover:bg-white/10"
               >
                 {/* search icon */}
                 <svg
@@ -68,7 +74,7 @@ The Hipsters Cafe hello           </a>
                   />
                 </svg>
               </button>
-              <button className="nav-ta h-10 px-4 rounded border border-white/30 hover:bg-white hover:text-[#25180e] font-medium transition">
+              <button className="nav-cta h-10 px-4 rounded border border-white/30 hover:bg-white hover:text-[#25180e] font-medium transition">
                 Sign In
               </button>
             </div>
@@ -98,7 +104,7 @@ The Hipsters Cafe hello           </a>
         }`}
       >
         <div className="px-6 pt-5 pb-8 flex items-center justify-between border-b border-white/15">
-          <span className="text-2xl font-semibold">Caffeine</span>
+          <span className="text-2xl font-semibold">The Hipsters Cafe</span>
           <div className="flex items-center gap-3">
             {/* search button */}
             <button
@@ -145,22 +151,20 @@ The Hipsters Cafe hello           </a>
         </div>
 
         <div className="px-6 py-6 space-y-2">
-          {["Home", "Menu", "About Us", "Facilities"].map((item) => (
+          {["Home", "Menu", "About Us", "Facilities", "Contact"].map((item) => (
             <a
               key={item}
-              href={"#" + item.toLowerCase().replace(/\s+/g, "")}
+              href={
+                item === "Contact"
+                  ? "/contact"
+                  : "#" + item.toLowerCase().replace(/\s+/g, "")
+              }
               onClick={() => setOpen(false)}
               className="block text-lg py-3 border-b border-white/10"
             >
               {item}
             </a>
           ))}
-
-          {/* <div className="pt-4">
-            <button className="w-full h-11 rounded border border-white/25 hover:bg-white hover:text-[#25180e] font-medium transition">
-              Sign In
-            </button>
-          </div> */}
         </div>
       </div>
 

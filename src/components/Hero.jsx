@@ -14,7 +14,7 @@ export default function Hero() {
     () => [
       "/c1.png",
       "/c2.webp",
-      "/download.png",
+      // "/download.png",
     ],
     []
   );
