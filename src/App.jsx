@@ -7,10 +7,10 @@ import BestSelling from './components/BestSelling'
 const App = () => {
   return (
     <div className="h-screen w-full overflow-x-hidden">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <About />
-      <BestSelling />
+      {/* <BestSelling /> */}
     </div>
   )
 }
