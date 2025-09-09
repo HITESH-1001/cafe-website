@@ -10,7 +10,7 @@ const foods = [
   },
   {
     name: "Chicken Masala",
-    image: "/images/chicken-masala.jpg",
+    image: "/img2.webp",
     rating: 220,
     price: 4.0,
     desc: "This is a great chicken masala that is very healthy. You can eat it with any meal."
